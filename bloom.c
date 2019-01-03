@@ -16,7 +16,7 @@ void get_hashes(unsigned int [], char *);
 void bloom_insert(unsigned char *);
 void bloom_query(unsigned char *);
 void set_bit(int);
-int test_bit();
+int test_bit(int);
 
 int bit_arr[100];
 
@@ -27,7 +27,6 @@ main(){
 	bloom_insert("Shagg");
 	
 	bloom_query("Scooby");
-	bloom_query("Shaggy");
 	bloom_query("shaggy132");
 	bloom_query("ABC");
 	bloom_query("Scooby_Doo");
@@ -107,7 +106,7 @@ void get_hashes(unsigned int hash[], char *in)
 }
 
 
-//HASH FUNCTIONS:
+//HASH FUNCTIONS
 
 unsigned int RSHash(unsigned char *str)
 {
